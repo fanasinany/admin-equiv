@@ -1,11 +1,15 @@
 $green-primary: #005162;
 $green-secondary: #226673;
+$text-color: #546E7A;
+$blue-sky: #D0EDFF;
+$mobile-breakpoint : 780px;
+
 
 @mixin fit-container {
   max-width: unset;
   width: 100%;
   padding: 0 32px;
-  @media(max-width: 780px){
+  @media(max-width: $mobile-breakpoint){
     padding: 0 18px;
   }
 }

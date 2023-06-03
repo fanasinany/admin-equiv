@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.card-service_wrapper {
+  background-color: $blue-sky;
+  min-height: 240px;
+  padding: 24px;
+  max-width: 347px;
+  border-radius: 6px;
+
+  h3 {
+    color: $green-secondary;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  hr {
+    margin: 12px 0;
+    border: 1px solid #a1d7ff;
+  }
+
+  @media (max-width: 1250px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 1110px) {
+    max-width: calc(50% - 24px);
+    width: calc(50% - 24px);
+  }
+}

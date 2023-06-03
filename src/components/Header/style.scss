@@ -72,7 +72,7 @@
     @media (max-width: 1310px) {
       @include fit-container;
     }
-    @media (max-width: 780px) {
+    @media (max-width: $mobile-breakpoint) {
       margin-top: 0;
       height: 60px;
       ul {
@@ -84,7 +84,7 @@
 
 .burger-menu {
   display: none;
-  @media (max-width: 780px) {
+  @media (max-width: $mobile-breakpoint) {
     display: block;
   }
 }
@@ -95,7 +95,7 @@
   .title-mobile {
     display: none;
   }
-  @media (max-width: 780px) {
+  @media (max-width: $mobile-breakpoint) {
     img {
       height: 38px;
       width: 46px;
