@@ -2,8 +2,10 @@ import React from "react";
 import "./style.scss";
 import Link from "next/link";
 import Image from "next/image";
-import logoFlag from "../Assets/Icons/flag-1.png";
-import logoMtefpls from "../Assets/Icons/MTEFPLS.png";
+import logoFlag from "../Assets/Images/flag-1.png";
+import logoMtefpls from "../Assets/Images/MTEFPLS.png";
+import GridiconsChevronDown from "../Assets/Icons/GridiconsChevronDown";
+import RadixIconsHamburgerMenu from "../Assets/Icons/RadixIconsHamburgerMenu";
 
 const Header = () => {
   return (
@@ -19,15 +21,18 @@ const Header = () => {
         </div>
       </div>
       <nav>
-        <Link href="#">
+        <Link href="#" className="title-and-logo">
           <Image src={logoMtefpls} alt="Logo Mtefpls" />
+          <span className="title-mobile">SERVICE DES EQUIVALENCES <br /> ADMINISTRATIVES ET TITRES</span>
         </Link>
         <ul>
           <li>
             <Link href="#">Accueil</Link>
           </li>
-          <li>
-            <Link href="#">Outils</Link>
+          <li className="outils-dropdown">
+            <Link href="#">
+              Outils <GridiconsChevronDown height={20} width={20} />
+            </Link>
           </li>
           <li>
             <Link href="#">Page d&apos;aide</Link>
@@ -40,6 +45,9 @@ const Header = () => {
           </li>
           <li>FR</li>
         </ul>
+        <span className="burger-menu">
+          <RadixIconsHamburgerMenu height={16} width={16}/>
+        </span>
       </nav>
     </header>
   );

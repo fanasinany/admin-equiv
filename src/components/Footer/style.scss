@@ -22,8 +22,27 @@ footer {
             line-height: 36px;
             margin-bottom: 26px;
             margin-top: 0;
+            @media (max-width: 780px) {
+              font-size: 18px;
+              margin-bottom: 18px;
+            }
           }
           margin-top: 8px;
+        }
+      }
+
+      @media (max-width: 910px) {
+        gap: unset;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 530px) {
+        flex-direction: column;
+        ul {
+          margin-bottom: 32px;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -33,5 +52,12 @@ footer {
     .copyright {
       font-size: 14px;
     }
+
+    @media (max-width: 1310px) {
+      @include fit-container;
+    }
+  }
+  @media (max-width: 530px) {
+    padding: 32px 0;
   }
 }

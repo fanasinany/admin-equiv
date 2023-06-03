@@ -1,55 +1,112 @@
 @import "../../styles/variables";
 
-.headerWrapper{
-    color: white;
-    &>.topNav{
-        background-color: $green-primary;
-        height: 54px;
-        border-radius: 0 0px 8px 8px;
-        max-width: 1040px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-        padding-right: 16px;
-        font-weight: 500;
-        &>div:first-child{
+.headerWrapper {
+  color: white;
+  & > .topNav {
+    background-color: $green-primary;
+    height: 54px;
+    border-radius: 0 0px 8px 8px;
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 16px;
+    font-weight: 500;
+    & > div:first-child {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 8px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+    & > div:last-child {
+      a {
+        text-decoration-line: underline;
+        margin-left: 16px;
+      }
+    }
+    @media (max-width: 1060px) {
+      max-width: unset;
+      margin: 0 32px;
+    }
+
+    @media (max-width: 860px) {
+      display: none;
+    }
+  }
+
+  nav {
+    height: 77px;
+    max-width: 1288px;
+    margin: 32px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $green-secondary;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-weight: 700;
+      display: flex;
+
+      & > li {
+        margin-left: 32px;
+
+        &.outils-dropdown {
+          a {
             display: flex;
             align-items: center;
-            img{
-                margin-right: 8px;
+            svg {
+              margin-left: 12px;
             }
-            span{
-                font-weight: 700;
-            }
+          }
         }
-        &>div:last-child{
-            a{
-                text-decoration-line: underline;
-                margin-left: 16px;
-            }
-        }
+      }
+    }
+    @media (max-width: 1310px) {
+      @include fit-container;
+    }
+    @media (max-width: 780px) {
+      margin-top: 0;
+      height: 60px;
+      ul {
+        display: none;
+      }
+    }
+  }
+}
+
+.burger-menu {
+  display: none;
+  @media (max-width: 780px) {
+    display: block;
+  }
+}
+
+.title-and-logo {
+  display: flex;
+  align-items: center;
+  .title-mobile {
+    display: none;
+  }
+  @media (max-width: 780px) {
+    img {
+      height: 38px;
+      width: 46px;
     }
 
-    nav{
-        height: 77px;
-        max-width: 1288px;
-        margin: 32px auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        ul{
-            margin: 0;
-            padding: 0;
-            color: $green-secondary;
-            list-style: none;
-            font-weight: 700;
-            display: flex;
-
-            &>li{
-                margin-left: 32px;
-            }
-        }
+    .title-mobile {
+      display: flex;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 12px;
+      margin-left: 8px;
     }
+  }
 }
