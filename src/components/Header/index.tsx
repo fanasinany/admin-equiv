@@ -6,6 +6,7 @@ import logoFlag from "../Assets/Images/flag-1.png";
 import logoMtefpls from "../Assets/Images/MTEFPLS.png";
 import RadixIconsHamburgerMenu from "../Assets/Icons/RadixIconsHamburgerMenu";
 import MenuTools from "../MenuTools";
+import MenuLang from "../MenuLang";
 
 const Header = () => {
   return (
@@ -32,7 +33,7 @@ const Header = () => {
             <Link href="#">Accueil</Link>
           </li>
           <li className="outils-dropdown">
-            <MenuTools/>
+            <MenuTools />
           </li>
           <li>
             <Link href="#">Page d&apos;aide</Link>
@@ -43,7 +44,9 @@ const Header = () => {
           <li>
             <Link href="#">Contact</Link>
           </li>
-          <li>FR</li>
+          <li>
+            <MenuLang />
+          </li>
         </ul>
         <span className="burger-menu">
           <RadixIconsHamburgerMenu height={16} width={16} />
