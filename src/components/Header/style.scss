@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.headerWrapper{
+    color: white;
+    &>.topNav{
+        background-color: $green-primary;
+        height: 54px;
+        border-radius: 0 0px 8px 8px;
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        padding-right: 16px;
+        font-weight: 500;
+        &>div:first-child{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 8px;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+        &>div:last-child{
+            a{
+                text-decoration-line: underline;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    nav{
+        height: 77px;
+        max-width: 1288px;
+        margin: 32px auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            margin: 0;
+            padding: 0;
+            color: $green-secondary;
+            list-style: none;
+            font-weight: 700;
+            display: flex;
+
+            &>li{
+                margin-left: 32px;
+            }
+        }
+    }
+}
