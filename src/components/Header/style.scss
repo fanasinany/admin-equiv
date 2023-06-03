@@ -48,25 +48,15 @@
     align-items: center;
     justify-content: space-between;
     color: $green-secondary;
-    ul {
+    &>ul {
       margin: 0;
       padding: 0;
       list-style: none;
       font-weight: 700;
       display: flex;
-
+      align-items: center;
       & > li {
         margin-left: 32px;
-
-        &.outils-dropdown {
-          a {
-            display: flex;
-            align-items: center;
-            svg {
-              margin-left: 12px;
-            }
-          }
-        }
       }
     }
     @media (max-width: 1310px) {

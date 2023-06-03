@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import logoFlag from "../Assets/Images/flag-1.png";
 import logoMtefpls from "../Assets/Images/MTEFPLS.png";
-import GridiconsChevronDown from "../Assets/Icons/GridiconsChevronDown";
 import RadixIconsHamburgerMenu from "../Assets/Icons/RadixIconsHamburgerMenu";
+import MenuTools from "../MenuTools";
 
 const Header = () => {
   return (
@@ -23,16 +23,16 @@ const Header = () => {
       <nav>
         <Link href="#" className="title-and-logo">
           <Image src={logoMtefpls} alt="Logo Mtefpls" />
-          <span className="title-mobile">SERVICE DES EQUIVALENCES <br /> ADMINISTRATIVES ET TITRES</span>
+          <span className="title-mobile">
+            SERVICE DES EQUIVALENCES <br /> ADMINISTRATIVES ET TITRES
+          </span>
         </Link>
         <ul>
           <li>
             <Link href="#">Accueil</Link>
           </li>
           <li className="outils-dropdown">
-            <Link href="#">
-              Outils <GridiconsChevronDown height={20} width={20} />
-            </Link>
+            <MenuTools/>
           </li>
           <li>
             <Link href="#">Page d&apos;aide</Link>
@@ -46,7 +46,7 @@ const Header = () => {
           <li>FR</li>
         </ul>
         <span className="burger-menu">
-          <RadixIconsHamburgerMenu height={16} width={16}/>
+          <RadixIconsHamburgerMenu height={16} width={16} />
         </span>
       </nav>
     </header>

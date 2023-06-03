@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+.custom-menu-button {
+  background-color: transparent;
+  color: $green-secondary;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  svg {
+    margin-left: 12px;
+  }
+}
+
+.custom-menu {
+  ul {
+    background-color: white;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 240px;
+    list-style: none;
+    padding: 12px;
+    &>li{
+        font-weight: 400;
+        padding: 8px 0;
+        &:nth-child(2){
+            border-bottom: 1px solid #CFD8DC;
+        }
+    }
+  }
+}
