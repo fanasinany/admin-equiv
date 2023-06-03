@@ -5,6 +5,11 @@ import CardServiceEquivalence from "../CardServiceEquivalence";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
+/* get windows width */
+function getCurrentDimension() {
+  return window.innerWidth;
+}
+
 const UtilityService = () => {
   const [items, setItems] = useState([
     {
@@ -36,26 +41,27 @@ const UtilityService = () => {
         "Pour certaines entreprises privées qui souhaite avoir une référence pour déterminer le salaire d'un travailleur",
     },
   ]);
-  /* get windows width */
-  function getCurrentDimension() {
-    return window.innerWidth;
-  }
-  const [widthSize, setWidthSize] = useState(getCurrentDimension());
+  const [widthSize, setWidthSize] = useState(0);
 
   useEffect(() => {
     const updateDimension = () => {
       setWidthSize(getCurrentDimension());
     };
-    window.addEventListener("resize", updateDimension);
+    updateDimension(); // Set initial value
 
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, [widthSize]);
+    // Only add event listener in the browser environment
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", updateDimension);
+
+      return () => {
+        window.removeEventListener("resize", updateDimension);
+      };
+    }
+  }, []);
 
   return (
     <React.Fragment>
-      {widthSize > 560 ? (
+      {widthSize && widthSize > 560 ? (
         <div className="serviceWrapperWeb">
           {items.map((item, index) => {
             return (
