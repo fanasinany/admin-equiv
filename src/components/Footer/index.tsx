@@ -47,7 +47,7 @@ const Footer = () => {
         <hr />
         <div className="copyright">
           Copyright © 2023, MTEFPLS | Mentions légales | Condition générale
-          d'utilisation
+          d&apos;utilisation
         </div>
       </div>
     </footer>
