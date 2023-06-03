@@ -25,7 +25,7 @@ const Header = () => {
         </div>
       </div>
       <nav>
-        <Link href="#" className="title-and-logo">
+        <Link href="/" className="title-and-logo">
           <Image src={logoMtefpls} alt="Logo Mtefpls" />
           <span className="title-mobile">
             SERVICE DES EQUIVALENCES <br /> ADMINISTRATIVES ET TITRES
@@ -33,7 +33,7 @@ const Header = () => {
         </Link>
         <ul className={`${showMenuMobile ? "active" : ""}`}>
           <li>
-            <Link href="#">Accueil</Link>
+            <Link href="/">Accueil</Link>
           </li>
           <li className="outils-dropdown">
             <MenuTools />
@@ -49,7 +49,7 @@ const Header = () => {
             <Link href="#">FAQ</Link>
           </li>
           <li>
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li>
             <MenuLang />

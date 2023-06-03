@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+.localisation {
+  & > div {
+    text-align: center;
+    @media (max-width: $mobile-breakpoint) {
+        img{
+            width: 321px;
+            height: 373px;
+        }
+    }
+    @media (max-width: 375px) {
+        img{
+            width: 261px;
+            height: 313px;
+        }
+    }
+  }
+}
