@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./style.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,8 +8,10 @@ import logoMtefpls from "../Assets/Images/MTEFPLS.png";
 import RadixIconsHamburgerMenu from "../Assets/Icons/RadixIconsHamburgerMenu";
 import MenuTools from "../MenuTools";
 import MenuLang from "../MenuLang";
+import MaterialSymbolsClose from "../Assets/Icons/MaterialSymbolsClose";
 
 const Header = () => {
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
   return (
     <header className="headerWrapper">
       <div className="topNav">
@@ -28,12 +31,16 @@ const Header = () => {
             SERVICE DES EQUIVALENCES <br /> ADMINISTRATIVES ET TITRES
           </span>
         </Link>
-        <ul>
+        <ul className={`${showMenuMobile ? "active" : ""}`}>
           <li>
             <Link href="#">Accueil</Link>
           </li>
           <li className="outils-dropdown">
             <MenuTools />
+            <div className="mobile-tools-only">
+              <Link href="#">Rechercher un diplôme</Link>
+              <Link href="#">Prendre un rendez-vous</Link>
+            </div>
           </li>
           <li>
             <Link href="#">Page d&apos;aide</Link>
@@ -48,8 +55,15 @@ const Header = () => {
             <MenuLang />
           </li>
         </ul>
-        <span className="burger-menu">
-          <RadixIconsHamburgerMenu height={16} width={16} />
+        <span
+          className="burger-menu"
+          onClick={() => setShowMenuMobile((current) => !current)}
+        >
+          {!showMenuMobile ? (
+            <RadixIconsHamburgerMenu height={16} width={16} />
+          ) : (
+            <MaterialSymbolsClose height={16} width={16} />
+          )}
         </span>
       </nav>
     </header>

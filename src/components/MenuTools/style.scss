@@ -7,6 +7,9 @@
   font-weight: 700;
   svg {
     margin-left: 12px;
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
   }
 }
 
@@ -18,12 +21,12 @@
     width: 240px;
     list-style: none;
     padding: 12px;
-    &>li{
-        font-weight: 400;
-        padding: 8px 0;
-        &:nth-child(2){
-            border-bottom: 1px solid #CFD8DC;
-        }
+    & > li {
+      font-weight: 400;
+      padding: 8px 0;
+      &:nth-child(2) {
+        border-bottom: 1px solid #cfd8dc;
+      }
     }
   }
 }
