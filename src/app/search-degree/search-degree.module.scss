@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+.search {
+  .searchWrapper {
+    background-color: $blue-sky;
+    display: flex;
+    box-shadow: 0px 12px 12px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 40px 52px;
+    @media (max-width: 1090px) {
+      padding: 32px;
+    }
+    & > * {
+      width: 50%;
+    }
+
+    & > form {
+      border-right: 1px solid $green-secondary;
+      padding-right: 48px;
+      & > div:last-child {
+        float: right;
+      }
+      @media (max-width: 1090px) {
+        padding-right: 24px;
+      }
+    }
+    & > div {
+      padding-left: 48px;
+      @media (max-width: 1090px) {
+        padding-left: 24px;
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      padding: 12px;
+      & > * {
+        width: 100%;
+      }
+      & > form {
+        border-right: none;
+        padding-right: 0px;
+        & > div:last-child {
+          margin-bottom: 32px;
+        }
+      }
+      & > div {
+        padding-left: 0px;
+      }
+    }
+  }
+}

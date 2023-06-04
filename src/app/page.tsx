@@ -74,7 +74,7 @@ const Home = () => {
             <p>
               Certains diplômes ou certificat{" "}
               <strong>requièrent des documents supplémentaires</strong>.
-              Veuillez utiliser l'<Link href="#">outil de recherche</Link> pour
+              Veuillez utiliser l'<Link href="/search-degree">outil de recherche</Link> pour
               voir si votre diplôme requièrent d'autres documents.
             </p>
           </div>

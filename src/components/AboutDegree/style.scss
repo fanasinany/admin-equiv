@@ -1,0 +1,30 @@
+.checkboxWrapper {
+  display: flex;
+  margin: 16px 0 32px 0;
+  & > div {
+    width: 50%;
+  }
+  @media(max-width: 1000px){
+    flex-direction: column;
+    & > div {
+        width: 100%;
+      }
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  & > input {
+    margin-bottom: 6px;
+  }
+  & > .note {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 16px;
+  }
+  & > * {
+    margin-bottom: 32px;
+  }
+}

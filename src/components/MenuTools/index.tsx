@@ -15,7 +15,7 @@ function MenuTools() {
         </MenuButton>
       }
     >
-      <MenuItem href="#" rel="noopener noreferrer">
+      <MenuItem href="/search-degree" rel="noopener noreferrer">
         Rechercher un diplôme
       </MenuItem>
       <MenuItem href="#" rel="noopener noreferrer">

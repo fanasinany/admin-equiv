@@ -25,14 +25,15 @@ const Contact = () => {
         <div>
           <div className={styles.formWrapper}>
             <form action="#">
-              <input type="text" placeholder="Votre prénom" />
-              <input type="email" placeholder="Votre adresse email" />
+              <input type="text" className="underline-input" placeholder="Votre prénom" />
+              <input type="email" className="underline-input" placeholder="Votre adresse email" />
               <SelectInput />
               <textarea
                 name="message"
                 id="message"
                 placeholder="Message"
                 rows={7}
+                className="underline-input"
               ></textarea>
               <div>
                 <button type="submit" className="green-button">

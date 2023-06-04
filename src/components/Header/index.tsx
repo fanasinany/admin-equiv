@@ -33,23 +33,23 @@ const Header = () => {
         </Link>
         <ul className={`${showMenuMobile ? "active" : ""}`}>
           <li>
-            <Link href="/">Accueil</Link>
+            <Link onClick={() => setShowMenuMobile(false)} href="/">Accueil</Link>
           </li>
           <li className="outils-dropdown">
             <MenuTools />
             <div className="mobile-tools-only">
-              <Link href="#">Rechercher un diplôme</Link>
-              <Link href="#">Prendre un rendez-vous</Link>
+              <Link onClick={() => setShowMenuMobile(false)} href="/search-degree">Rechercher un diplôme</Link>
+              <Link onClick={() => setShowMenuMobile(false)} href="#">Prendre un rendez-vous</Link>
             </div>
           </li>
           <li>
-            <Link href="#">Page d&apos;aide</Link>
+            <Link onClick={() => setShowMenuMobile(false)} href="#">Page d&apos;aide</Link>
           </li>
           <li>
-            <Link href="#">FAQ</Link>
+            <Link onClick={() => setShowMenuMobile(false)} href="#">FAQ</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link onClick={() => setShowMenuMobile(false)} href="/contact">Contact</Link>
           </li>
           <li>
             <MenuLang />
