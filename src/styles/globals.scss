@@ -96,3 +96,29 @@ button {
     padding: 0;
   }
 }
+
+input {
+  height: 44px;
+}
+
+textarea{
+  resize: none;
+}
+
+input,
+textarea {
+  font-size: 18px;
+  color: $text-color;
+  font-family: "Plus Jakarta Sans";
+  border: none;
+  border-bottom: 1px solid #226673;
+  padding-left: 8px;
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 14px;
+  }
+}
+
+input:focus-visible,
+textarea:focus-visible{
+  outline: none;
+}

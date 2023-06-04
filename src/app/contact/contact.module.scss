@@ -3,16 +3,74 @@
   & > div {
     text-align: center;
     @media (max-width: $mobile-breakpoint) {
-        img{
-            width: 321px;
-            height: 373px;
-        }
+      img {
+        width: 321px;
+        height: 373px;
+      }
     }
     @media (max-width: 375px) {
-        img{
-            width: 261px;
-            height: 313px;
+      img {
+        width: 261px;
+        height: 313px;
+      }
+    }
+  }
+}
+
+.contactUs {
+  & > div {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    & > div {
+      width: 45%;
+    }
+    .formWrapper {
+      form {
+        display: flex;
+        flex-direction: column;
+        &>* {
+          margin-top: 20px;
         }
+        &>div:last-of-type{
+          display: flex;
+          justify-content: flex-end;
+          button{
+            width: 220px;
+            @media (max-width: $mobile-breakpoint) {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    .adress {
+      img{
+        width: 100%;
+        border-radius: 10px;
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        & > span {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          svg {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    @media (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      width: 100%;
+      & > div {
+        width: 100%;
+      }
     }
   }
 }
