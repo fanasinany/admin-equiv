@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./faq.module.scss";
+import MaterialSymbolsSearchRounded from "@/components/Assets/Icons/MaterialSymbolsSearchRounded";
+import FaqTabs from "@/components/FaqTabs";
 
 export const metadata = {
   title: "FAQ",
@@ -7,16 +9,22 @@ export const metadata = {
 
 const Faq = () => {
   return (
-    <React.Fragment>
-      <section>
-        <h2>Remarque</h2>
+    <section className={styles.faq}>
+      <h1>FOIRE AUX QUESTIONS</h1>
+      <div className={styles.faqContainer}>
+        <div className={styles.searchInput}>
+          <input type="text" placeholder="Rechercher" />
+          <button>
+            <MaterialSymbolsSearchRounded />
+          </button>
+        </div>
         <p>
-          Si vous pensez que l'outil a fait une erreur dans la recherche de
-          l'équivalence pour votre filière, veuillez nous contacter à partir de
-          ce lien.
+          Vous pouvez entrer un mot clé dans la barre de recherche ou parcourir
+          les questions suivantes pour avoir les réponses à vos questions.
         </p>
-      </section>
-    </React.Fragment>
+        <FaqTabs />
+      </div>
+    </section>
   );
 };
 

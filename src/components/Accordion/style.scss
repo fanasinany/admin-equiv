@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+.accordion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  border-top: 2px solid $blue-sky;
+  cursor: pointer;
+  .acc-title {
+    color: $green-secondary;
+    font-weight: 700;
+  }
+
+  .close-acc {
+    transition: transform 0.3s ease;
+    &.rotate {
+      transform: rotate(45deg);
+    }
+  }
+  @media (max-width: $mobile-breakpoint) {
+    min-height: 68px;
+    height: auto;
+  }
+}
+
+.accordion-body {
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+  .accordion-inner{
+    border-top: 2px solid $blue-sky;
+    padding: 16px 24px 32px;
+    @media (max-width: $mobile-breakpoint) {
+      padding: 16px 24px 12px 12px;
+    }
+  }
+  &.active {
+    max-height: 400px;
+  }
+  ul {
+    li {
+      margin-left: 28px;
+    }
+  }
+}
