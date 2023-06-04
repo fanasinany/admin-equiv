@@ -31,7 +31,7 @@ const Home = () => {
           <Image src={paper} alt="Paper" />
         </div>
       </section>
-      <section className={styles.utility}>
+      <section>
         <h2>Utilité d&apos;une équivalence</h2>
         <p>
           Le service des équivalences administratives n&apos;est pas un service
@@ -74,13 +74,14 @@ const Home = () => {
             <p>
               Certains diplômes ou certificat{" "}
               <strong>requièrent des documents supplémentaires</strong>.
-              Veuillez utiliser l'<Link href="/search-degree">outil de recherche</Link> pour
-              voir si votre diplôme requièrent d'autres documents.
+              Veuillez utiliser l'
+              <Link href="/search-degree">outil de recherche</Link> pour voir si
+              votre diplôme requièrent d'autres documents.
             </p>
           </div>
         </div>
       </section>
-      <section className={styles.delay}>
+      <section>
         <h2>Délai de délivrance</h2>
         <p>
           Le délai de délivrance de l&apos;équivalence administrative est de 24h

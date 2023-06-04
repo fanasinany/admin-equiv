@@ -25,10 +25,6 @@
   }
 }
 
-.utility {
-
-}
-
 .step {
   .usedDocument {
     display: flex;
@@ -56,9 +52,27 @@
       text-decoration: underline;
     }
 
-    ul li {
-      margin-left: 24px;
-      margin-bottom: 12px;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        margin-left: 24px;
+        margin-bottom: 12px;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 18px;
+          height: 13px;
+          background-image: url("../components/Assets/Images/check.png");
+          margin-right: 20px;
+        }
+        @media (max-width: $mobile-breakpoint){
+          margin-left: 12px;
+          &:before {
+            margin-right: 10px;
+          }
+        }
+      }
     }
 
     @media (max-width: 875px) {
@@ -70,7 +84,4 @@
       }
     }
   }
-}
-
-.delay {
 }
