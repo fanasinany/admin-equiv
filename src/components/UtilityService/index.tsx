@@ -41,7 +41,7 @@ const UtilityService = () => {
         "Pour certaines entreprises privées qui souhaite avoir une référence pour déterminer le salaire d'un travailleur",
     },
   ]);
-  const [widthSize, setWidthSize] = useState(0);
+  const [widthSize, setWidthSize] = useState(1000);
 
   useEffect(() => {
     const updateDimension = () => {

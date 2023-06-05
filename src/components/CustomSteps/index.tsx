@@ -12,7 +12,7 @@ const StepperComponent = dynamic(() => import("../CustomStepper"), {
 });
 
 const CustomSteps = () => {
-  const [widthSize, setWidthSize] = useState(0);
+  const [widthSize, setWidthSize] = useState(1000);
 
   useEffect(() => {
     const updateDimension = () => {
