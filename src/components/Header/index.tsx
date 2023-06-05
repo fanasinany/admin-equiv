@@ -81,6 +81,9 @@ const Header = () => {
           )}
         </span>
       </nav>
+      <div className="bg-white">
+
+      </div>
     </header>
   );
 };

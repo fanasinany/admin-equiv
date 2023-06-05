@@ -2,7 +2,13 @@
 
 .headerWrapper {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   & > .topNav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     background-color: $green-primary;
     height: 54px;
     border-radius: 0 0px 8px 8px;
@@ -14,6 +20,7 @@
     font-size: 14px;
     padding-right: 16px;
     font-weight: 500;
+    width: 100%;
     & > div:first-child {
       display: flex;
       align-items: center;
@@ -30,8 +37,8 @@
         margin-left: 16px;
       }
     }
-    @media (max-width: 1060px) {
-      max-width: unset;
+    @media (max-width: 1150px) {
+      max-width: 860px;
       margin: 0 32px;
     }
 
@@ -43,11 +50,12 @@
   nav {
     height: 77px;
     max-width: 1288px;
-    margin: 32px auto 0 auto;
+    margin: 86px auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: $green-secondary;
+    width: 100%;
     & > ul {
       margin: 0;
       padding: 0;
@@ -66,7 +74,7 @@
       @include fit-container;
     }
     @media (max-width: $mobile-breakpoint) {
-      margin-top: 0;
+      margin-top: 0!important;
       height: 60px;
       ul {
         display: none;
@@ -95,6 +103,20 @@
           }
         }
       }
+    }
+    @media (max-width: 860px) {
+      margin-top: 32px;
+    }
+  }
+
+  .bg-white {
+    height: 54px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    @media (max-width: 860px) {
+      display: none;
     }
   }
 }
