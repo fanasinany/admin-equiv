@@ -3,13 +3,9 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import paper from "../components/Assets/Images/paper.png";
 import UtilityService from "@/components/UtilityService";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import layer from "../components/Assets/Images/layer.png";
-
-const StepperComponent = dynamic(() => import("../components/CustomStepper"), {
-  ssr: false,
-});
+import CustomSteps from "@/components/CustomSteps";
 
 const Home = () => {
   return (
@@ -55,7 +51,7 @@ const Home = () => {
           d&apos;éviter les cas rejets.
         </p>
         <div className={styles.stepper}>
-          <StepperComponent />
+          <CustomSteps />
         </div>
         <div className={styles.usedDocument}>
           <div>
