@@ -8,7 +8,7 @@
   & > .topNav {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     background-color: $green-primary;
     height: 54px;
     border-radius: 0 0px 8px 8px;

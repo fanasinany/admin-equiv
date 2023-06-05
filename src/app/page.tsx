@@ -2,9 +2,14 @@ import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import paper from "../components/Assets/Images/paper.png";
-import layer from "../components/Assets/Images/layer.png";
-import Link from "next/link";
 import UtilityService from "@/components/UtilityService";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import layer from "../components/Assets/Images/layer.png";
+
+const StepperComponent = dynamic(() => import("../components/CustomStepper"), {
+  ssr: false,
+});
 
 const Home = () => {
   return (
@@ -49,7 +54,9 @@ const Home = () => {
           ci-après pour assurer que votre demande soit conforme afin
           d&apos;éviter les cas rejets.
         </p>
-        <div className={styles.stepper}></div>
+        <div className={styles.stepper}>
+          <StepperComponent />
+        </div>
         <div className={styles.usedDocument}>
           <div>
             <Image src={layer} alt="Doc" height={450} />
